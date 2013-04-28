@@ -152,6 +152,9 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 
+"************插件:supertab***************
+let g:SuperTabMappingForward="<tab>"
+
 "===============一键编译运行==========
 "说明：一键编译C++文件，并运行可执行文件，对于单个文件的小程序实用
 "快捷键为:
