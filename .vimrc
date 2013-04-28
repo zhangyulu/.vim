@@ -1,7 +1,7 @@
 "The vimrc File Of Zhangyulu
 "
 " Maintainer:   zhangyulu <zhangyulu@outlook.com>
-" Last change:  2013.4.12
+" Last change:  2013.4.28
 "
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
@@ -12,6 +12,8 @@
 
 set nocompatible
 set nu
+
+let g:C_SourceCodeExtensions  = 'h cc cp cxx cpp CPP c++ C i ii'
 
 set backspace=indent,eol,start
 set history=50          " keep 50 lines of command line history
