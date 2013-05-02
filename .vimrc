@@ -39,7 +39,7 @@ set tenc=utf-8
 
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme desert
 
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -180,5 +180,5 @@ endfunc
 nmap <silent> <F8> :call CompileRunGplusplus()<CR><CR>
 nmap <silent> <F7> :call CompileRunGcc()<CR><CR>
 
-
+nmap <leader>a :A<cr>
 
