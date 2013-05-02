@@ -28,14 +28,18 @@ set tabstop=4
 map <C-n> :nohl<CR>
 
 "设置字体编码
+if has("win32")
+    language messages zh_CN.utf-8
+endif
+
 set fencs=utf-8,gbk,gb2312,gb18030,cs-bom,cp936,latin1
 set fenc=gbk  
 set enc=utf-8
 set tenc=utf-8
 
-"set t_Co=256
+set t_Co=256
 set background=dark
-colorscheme desert
+colorscheme solarized
 
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -75,12 +79,12 @@ autocmd BufRead *.c,*.cpp,*.h   set cindent
 
 endif " has("autocmd")
 
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
+set nobackup
+"if has("vms")
+"  set nobackup		" do not keep a backup file, use versions instead
+"else
+"  set backup		" keep a backup file
+"endif
 
 let mapleader = ","
 let g:mapleader = ","
