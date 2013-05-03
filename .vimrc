@@ -1,7 +1,7 @@
-"The vimrc File Of Zhangyulu
+"The vimrc File Of ZhangYulu
 "
 " Maintainer:   zhangyulu <zhangyulu@outlook.com>
-" Last change:  2013.4.28
+" Last change:  2013.5.3
 "
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
@@ -15,6 +15,7 @@ set nu
 
 let g:C_SourceCodeExtensions  = 'h cc cp cxx cpp CPP c++ C i ii'
 
+"normal vim options
 set backspace=indent,eol,start
 set history=50          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
@@ -24,10 +25,19 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
-"关闭高亮搜索
-map <C-n> :nohl<CR>
+"Key Maps
+let mapleader = ","
+let g:mapleader = ","
 
-"设置字体编码
+nnoremap ; :
+
+nmap <leader>q :q<CR>
+nmap <leader>x :xa<CR>
+
+"Close highlight
+"map <C-n> :nohl<CR> 
+
+"Set the charactor encoding
 if has("win32")
     language messages zh_CN.utf-8
 endif
@@ -37,6 +47,7 @@ set fenc=gbk
 set enc=utf-8
 set tenc=utf-8
 
+"Color Scheme
 set t_Co=256
 set background=dark
 colorscheme desert
@@ -46,6 +57,7 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+"File type plugin
 if has("autocmd")
 
   " Enable file type detection.
@@ -86,13 +98,7 @@ set nobackup
 "  set backup		" keep a backup file
 "endif
 
-let mapleader = ","
-let g:mapleader = ","
-
-nmap <leader>q :q<CR>
-nmap <leader>x :xa<CR>
-
-"设置窗口切换
+"Window switch
 map <silent><C-j> <C-w>j
 "jump to the below window
 map <silent><C-k> <C-w>k 
@@ -102,7 +108,7 @@ map <silent><C-h> <C-w>h
 map <silent><C-l> <C-w>l 
 "jump to the right window
 
-"************* 插件:ctags *****************
+"************* plugin:ctags *****************
 
 if filereadable("tags")
     set tags=tags
@@ -124,7 +130,7 @@ endfunc
 nmap <leader>ct :call ProduceTags()<CR> 
 "******************************************************
 
-"*************插件:taglist ***************
+"*************plugin:taglist ***************
 
 "let Tlist_Auto_Open = 1 "启动vim时，自动打开taglist窗口
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'   "设置系统中ctags程序的位置
@@ -133,10 +139,10 @@ let Tlist_Exit_OnlyWindow = 1   "如果taglist窗口是最后一个窗口，则�
 "let Tlist_Use_Right_Window = 1  "在右侧窗口中显示taglist窗口
 "let Tlist_GainFocus_On_ToggleOpen = 1 "使用TlistToggle打开taglist窗口时，输入焦点在taglist窗口中
 "let Tlist_WinHeight = 50 
-"let Tlist_WinWidth = 0
+"let Tlist_WinWidth = 30
 "let Tlist_Sort_Type = "name" "使taglist以tag名字进行排序，缺省是按tag在文件中的顺序排序
 
-"************插件:winmanager ***************
+"************plugin:winmanager ***************
 "设置显示内容为FileExplorer 和 TagList
 let g:winManagerWindowLayout='FileExplorer|TagList'
 
@@ -149,14 +155,14 @@ let g:winManagerWidth = 30
 nmap <leader>wm :WMToggle<cr>
 nmap <leader>wc :WMClose<cr>
 
-"************插件:minibuffer explorer***************
+"************plugin:minibuffer explorer***************
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 
 
-"************插件:supertab***************
+"************plugin:supertab***************
 let g:SuperTabMappingForward="<tab>"
 
 "===============一键编译运行==========
@@ -180,5 +186,7 @@ endfunc
 nmap <silent> <F8> :call CompileRunGplusplus()<CR><CR>
 nmap <silent> <F7> :call CompileRunGcc()<CR><CR>
 
+"************plugin:A.vim***************
 nmap <leader>a :A<cr>
+"******************************************************
 
