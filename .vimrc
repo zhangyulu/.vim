@@ -50,7 +50,13 @@ set tenc=utf-8
 "Color Scheme
 set t_Co=256
 set background=dark
-colorscheme desert
+colorscheme solarized
+
+"highlight current line and column
+set cursorline
+"set cursorcolumn
+"hi CursorLine term=bold cterm=bold guibg=Grey40
+set colorcolumn=80
 
 if &t_Co > 2 || has("gui_running")
   syntax on
