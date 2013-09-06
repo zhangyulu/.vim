@@ -2,3 +2,8 @@
 ====
 
 My vim configuration
+
+To use it, you only need to clone it into your ~/.vim directory, then copy/move
+the .vimrc to ~/ directory
+
+Enjoy vimming
