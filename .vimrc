@@ -75,7 +75,6 @@ Bundle 'vim-scripts/taglist.vim'
 "Bundle 'Lokaltog/powerline'
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'msanders/snipmate.vim'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/rainbow_parentheses.vim'
@@ -83,9 +82,11 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'SirVer/ultisnips'
+Bundle 'Lokaltog/vim-easymotion'
 
 "vim.org/srcipts
 "Bundle 'c.vim'
+Bundle 'a.vim'
 
 "let g:Powerline_symbols = 'fancy'
 
@@ -94,12 +95,6 @@ let mapleader = ","
 let g:mapleader = ","
 
 nnoremap ; :
-
-"nmap <leader>q :q<CR>
-"nmap <leader>x :xa<CR>
-
-"Close highlight
-"map <C-n> :nohl<CR> 
 
 "Set the charactor encoding
 if has("win32")
