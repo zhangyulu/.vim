@@ -83,9 +83,11 @@ Bundle 'Yggdroot/indentLine'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/syntastic'
+Bundle 'terryma/vim-multiple-cursors'
 
 "vim.org/srcipts
-"Bundle 'c.vim'
+Bundle 'c.vim'
 Bundle 'a.vim'
 
 "let g:Powerline_symbols = 'fancy'
@@ -280,8 +282,13 @@ nmap <leader>bd :MBEbd<CR>
 "nmap <leader>bn :MBEbf<CR>
 "nmap <leader>bN :MBEbb<CR>
 
-nmap <leader>bn <C-^>
 
+"************plugin syntastic**************
+let g:syntastic_always_populate_loc_list=1
+
+"************plugin multi-cursors**************
+highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+"highlight link multiple_cursors_visual Visual
 
 "************plugin:supertab***************
 "let g:SuperTabMappingForward="<tab>"
