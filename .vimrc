@@ -85,9 +85,10 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'Valloric/YouCompleteMe'
 
 "vim.org/srcipts
-Bundle 'c.vim'
+"Bundle 'c.vim'
 Bundle 'a.vim'
 
 "let g:Powerline_symbols = 'fancy'
@@ -96,6 +97,7 @@ Bundle 'a.vim'
 let mapleader = ","
 let g:mapleader = ","
 
+set runtimepath+=~/.vim/bundle/myplugin
 nnoremap ; :
 
 "Set the charactor encoding
@@ -166,15 +168,19 @@ set nobackup
 "endif
 
 "Window switch
-map <silent><C-j> <C-w>j
+nmap <silent><C-j> <C-w>j
 "jump to the below window
-map <silent><C-k> <C-w>k 
+nmap <silent><C-k> <C-w>k 
 "jump to the above window
-map <silent><C-h> <C-w>h 
+nmap <silent><C-h> <C-w>h 
 "jump to the left window
-map <silent><C-l> <C-w>l 
+nmap <silent><C-l> <C-w>l 
 "jump to the right window
 
+"auto complete {}
+"if &filetype == "c" || &filetype == "cpp" || &filetype == "h" || &filetype == "cc" || &filetype == "hpp"
+    "inoremap <buffer> {<CR> {<CR>}<Esc>O
+"endif
 "************* plugin:ctags *****************
 
 if filereadable("tags")
@@ -191,7 +197,6 @@ func! ProduceTags()
         exec "!rm tags"
     endif    
     exec "!ctags -R --c++-kinds=+p --fields=+lS --extra=+q ."
-    cscope add cscope.out .
 endfunc
 
 nmap <leader>ct :call ProduceTags()<CR> 
@@ -216,19 +221,6 @@ let g:tagbar_autofocus=1
 let g:tagbar_left=1
 let g:tagbar_width=25
 let g:tagbar_sort=0
-
-"************plugin:winmanager ***************
-"设置显示内容为FileExplorer 和 TagList
-"let g:winManagerWindowLayout='FileExplorer|TagList'
-
-"如果关闭了所有文件只剩下该浏览窗口，则退出vim
-"let g:persistentBehaviour=0
-
-"设置窗口宽度
-"let g:winManagerWidth = 30
-
-"nmap <leader>wm :WMToggle<cr>
-"nmap <leader>wc :WMClose<cr>
 
 "************plugin:NERDTree****************
 let g:NERDTreeWinSize=25
@@ -265,7 +257,10 @@ let g:indentLine_color_term = 0
 
 "************plugin:ultisnips**************
 set runtimepath+=~/.vim/bundle/ultisnips
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:ycm_use_ultisnips_completer = 0
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+"let g:UltiSnipsJumpBackwarkTrigger = "<c-k>"
 "define the snippets directory
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
