@@ -105,8 +105,7 @@ if has("win32")
     language messages zh_CN.utf-8
 endif
 
-set fencs=utf-8,gbk,gb2312,gb18030,cs-bom,cp936,latin1
-set fenc=gbk  
+set fencs=utf-8 ",gbk,gb2312,gb18030,cs-bom,cp936,latin1
 set enc=utf-8
 set tenc=utf-8
 
@@ -191,7 +190,7 @@ else
     "echo "no tags"
 endif
 
-"Ò»¼üÉú³ÉtagsÎÄ¼ş
+"ä¸€é”®ç”Ÿæˆtagsæ–‡ä»¶
 func! ProduceTags()
     if filereadable("tags")
         exec "!rm tags"
@@ -202,15 +201,15 @@ endfunc
 nmap <leader>ct :call ProduceTags()<CR> 
 
 "*************plugin:taglist ***************
-"let Tlist_Auto_Open = 1 "Æô¶¯vimÊ±£¬×Ô¶¯´ò¿ªtaglist´°¿Ú
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'   "ÉèÖÃÏµÍ³ÖĞctags³ÌĞòµÄÎ»ÖÃ
-let Tlist_Show_One_File = 1  "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag,Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄtag 
-let Tlist_Exit_OnlyWindow = 1   "Èç¹ûtaglist´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
-"let Tlist_Use_Right_Window = 1  "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú
-"let Tlist_GainFocus_On_ToggleOpen = 1 "Ê¹ÓÃTlistToggle´ò¿ªtaglist´°¿ÚÊ±£¬ÊäÈë½¹µãÔÚtaglist´°¿ÚÖĞ
+"let Tlist_Auto_Open = 1 "å¯åŠ¨vimæ—¶ï¼Œè‡ªåŠ¨æ‰“å¼€taglistçª—å£
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'   "è®¾ç½®ç³»ç»Ÿä¸­ctagsç¨‹åºçš„ä½ç½®
+let Tlist_Show_One_File = 1  "ä¸åŒæ—¶æ˜¾ç¤ºå¤šä¸ªæ–‡ä»¶çš„tag,åªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„tag 
+let Tlist_Exit_OnlyWindow = 1   "å¦‚æœtaglistçª—å£æ˜¯æœ€åä¸€ä¸ªçª—å£ï¼Œåˆ™é€€å‡ºvim
+"let Tlist_Use_Right_Window = 1  "åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£
+"let Tlist_GainFocus_On_ToggleOpen = 1 "ä½¿ç”¨TlistToggleæ‰“å¼€taglistçª—å£æ—¶ï¼Œè¾“å…¥ç„¦ç‚¹åœ¨taglistçª—å£ä¸­
 "let Tlist_WinHeight = 50 
 let Tlist_WinWidth = 25 
-"let Tlist_Sort_Type = "name" "Ê¹taglistÒÔtagÃû×Ö½øĞĞÅÅĞò£¬È±Ê¡ÊÇ°´tagÔÚÎÄ¼şÖĞµÄË³ĞòÅÅĞò
+"let Tlist_Sort_Type = "name" "ä½¿taglistä»¥tagåå­—è¿›è¡Œæ’åºï¼Œç¼ºçœæ˜¯æŒ‰tagåœ¨æ–‡ä»¶ä¸­çš„é¡ºåºæ’åº
 
 nmap <leader>tl :TlistToggle<CR>
 
@@ -239,6 +238,8 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 "************plugin:airline****************
+let g:airline_left_sep = 'â–¶'
+let g:airline_right_sep = 'â—€'
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -288,11 +289,11 @@ highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 "************plugin:supertab***************
 "let g:SuperTabMappingForward="<tab>"
 
-"===============Ò»¼ü±àÒëÔËĞĞ==========
-"ËµÃ÷£ºÒ»¼ü±àÒëC++ÎÄ¼ş£¬²¢ÔËĞĞ¿ÉÖ´ĞĞÎÄ¼ş£¬¶ÔÓÚµ¥¸öÎÄ¼şµÄĞ¡³ÌĞòÊµÓÃ
-"¿ì½İ¼üÎª:
-"Ê¹ÓÃgcc±àÒë²¢Ö´ĞĞÎªF7
-"Ê¹ÓÃg++±àÒë²¢Ö´ĞĞÎªF8
+"===============ä¸€é”®ç¼–è¯‘è¿è¡Œ==========
+"è¯´æ˜ï¼šä¸€é”®ç¼–è¯‘C++æ–‡ä»¶ï¼Œå¹¶è¿è¡Œå¯æ‰§è¡Œæ–‡ä»¶ï¼Œå¯¹äºå•ä¸ªæ–‡ä»¶çš„å°ç¨‹åºå®ç”¨
+"å¿«æ·é”®ä¸º:
+"ä½¿ç”¨gccç¼–è¯‘å¹¶æ‰§è¡Œä¸ºF7
+"ä½¿ç”¨g++ç¼–è¯‘å¹¶æ‰§è¡Œä¸ºF8
 
 func! CompileRunGplusplus()
     exec "w"
