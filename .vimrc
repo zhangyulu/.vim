@@ -85,7 +85,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 
 "vim.org/srcipts
 "Bundle 'c.vim'
