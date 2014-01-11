@@ -85,7 +85,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 
 "vim.org/srcipts
 "Bundle 'c.vim'
@@ -98,6 +98,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 set runtimepath+=~/.vim/bundle/myplugin
+set runtimepath+=~/.vim/bundle/supertab
 nnoremap ; :
 
 "Set the charactor encoding
