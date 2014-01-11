@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/etc'
-let g:netrw_dirhist_2='/home/webkit/WebKit-r127852/Source/WebCore/page'
-let g:netrw_dirhist_3='/home/webkit/WebKit-r127852/Source/WebCore/bindings/scripts/test'
-let g:netrw_dirhist_4='/home/webkit/WebKit-r127852/Source/WebCore/bindings/scripts/test/CPP'
-let g:netrw_dirhist_5='/home/webkit/WebKit-r127852/Source/WebCore/page'
-let g:netrw_dirhist_6='/home/zyl/project'
