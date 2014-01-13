@@ -72,6 +72,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/cpp.vim'
 "Bundle 'Lokaltog/powerline'
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdcommenter'
@@ -105,7 +106,7 @@ if has("win32")
     language messages zh_CN.utf-8
 endif
 
-set fencs=utf-8 ",gbk,gb2312,gb18030,cs-bom,cp936,latin1
+set fencs=utf-8,gbk,gb2312,gb18030,cs-bom,cp936,latin1
 set enc=utf-8
 set tenc=utf-8
 
