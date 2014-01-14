@@ -178,14 +178,16 @@ nmap <silent><C-l> <C-w>l
 "jump to the right window
 
 "************* plugin:ctags *****************
+set autochdir
+set tags=tags;
 
-if filereadable("tags")
-    set tags=tags
-elseif filereadable("../tags")
-    set tags=../tags
-else
+"if filereadable("tags")
+    "set tags=tags
+"elseif filereadable("../tags")
+    "set tags=../tags
+"else
     "echo "no tags"
-endif
+"endif
 
 "一键生成tags文件
 func! ProduceTags()
@@ -282,6 +284,11 @@ let g:syntastic_always_populate_loc_list=1
 "************plugin multi-cursors**************
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 "highlight link multiple_cursors_visual Visual
+
+"************plugin YouCompleteMe**************
+let g:ycm_enable_diagnostic_highlighting = 0
+nnoremap <leader>ys :YcmShowDetailedDiagnostic<CR>
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "************plugin:supertab***************
 "let g:SuperTabMappingForward="<tab>"
