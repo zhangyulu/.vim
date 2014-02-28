@@ -287,6 +287,8 @@ highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 
 "************plugin YouCompleteMe**************
 let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>ys :YcmShowDetailedDiagnostic<CR>
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
