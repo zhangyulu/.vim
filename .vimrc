@@ -27,7 +27,7 @@ set shiftwidth=4
 set tabstop=4
 set scrolloff=7 "keep cursor stay in the middle 14 lines
 set laststatus=2
-set t_ti= t_te= "let text remain in terminal after quiting vim
+"set t_ti= t_te= "let text remain in terminal after quiting vim
 set showmatch "match the parentheses
 
 "ignore case if search pattern is all lowercase, case sensetive otherwise
@@ -64,6 +64,7 @@ cnoremap <C-e> <End>
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/myplugin
 call vundle#rc()
 
 "let Vundle manage Vundle
@@ -83,6 +84,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
@@ -98,7 +100,6 @@ Bundle 'a.vim'
 let mapleader = ","
 let g:mapleader = ","
 
-set runtimepath+=~/.vim/bundle/myplugin
 nnoremap ; :
 
 "Set the charactor encoding
